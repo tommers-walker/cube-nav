@@ -1,0 +1,10 @@
+{
+  "name": "cube-nav",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "blendid": "^4.4.3",
+    "gsap": "^2.0.2"
+  }
+}

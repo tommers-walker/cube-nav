@@ -1,0 +1,5 @@
+.nvmrc
+.DS_Store
+public
+node_modules
+npm-debug.log

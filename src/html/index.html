@@ -1,0 +1,36 @@
+{#
+  Nunjucks Templating!
+  Homepage: https://mozilla.github.io/nunjucks/
+  Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+  <h2 id="current-section">Home</h2>
+
+  <div class="scene js-proxy-trigger">
+    <div id="cube" class="cube">
+      <a href="#home" class="js-cube-face cube__face cube__face--front">
+        <span>Home</span>
+      </a>
+      <a href="#work" class="js-cube-face cube__face cube__face--right">
+        <span>Work</span>
+      </a>
+      <a href="#about" class="js-cube-face cube__face cube__face--back">
+        <span>About</span>
+      </a>
+      <a href="#contact" class="js-cube-face cube__face cube__face--left">
+        <span>Contact</span>
+      </a>
+      <a href="#top" class="cube__face cube__face--top">
+        <span>Top</span>
+      </a>
+      <a href="#bottom" class="cube__face cube__face--bottom">
+        <span>Bottom</span>
+      </a>
+    </div>
+    <div class="proxy js-proxy"></div>
+  </div>
+
+{% endblock %}
