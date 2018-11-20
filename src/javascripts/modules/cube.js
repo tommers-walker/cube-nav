@@ -6,11 +6,13 @@ const rotationSnap = 90;
 const cube = document.querySelector('#cube');
 const cubeFaces = Array.from(document.querySelectorAll('.js-cube-face'));
 const currentSection = document.querySelector('#current-section');
+const cubeProxy = document.querySelector('#proxy');
+const cubeProxyTrigger = document.querySelector('#proxy-trigger');
 
 const cubeAnim = {
   init() {
-    Draggable.create('.js-proxy', {
-      trigger: document.body,
+    Draggable.create(cubeProxy, {
+      trigger: cubeProxyTrigger,
       throwProps: true,
       dragClickables: true,
       lockAxis: true,
@@ -27,9 +29,10 @@ const cubeAnim = {
         TweenLite.set(cube, {rotationY:this.x})
       },
       onThrowComplete: function() {
-        // const remainder = Math.abs(this.x % 360);
+        // Figure out which face is showing
         let selector = (this.x % 360 / 90) * -1;
 
+        // If number is negative, change it to its equivalent position in the array
         if (selector < 0) {
           selector = cubeFaces.length + selector;
         }

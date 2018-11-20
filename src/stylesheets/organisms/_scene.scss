@@ -1,0 +1,6 @@
+.scene {
+  width: $cube-size;
+  height: $cube-size;
+  perspective: $cube-size*3;
+  position: relative;
+}
